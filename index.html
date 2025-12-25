@@ -29,6 +29,18 @@
         .text-accent { color: #FF4D2E; }
         .border-accent { border-color: #FF4D2E; }
         .hover-bg-accent:hover { background-color: #E64529; }
+        
+        /* Ocultar scrollbar en Chrome/Safari si es necesario */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #FF4D2E;
+          border-radius: 10px;
+        }
     </style>
 <script type="importmap">
 {
@@ -43,5 +55,7 @@
 </head>
 <body class="bg-white text-slate-900 antialiased transition-colors duration-300">
     <div id="root"></div>
+    <!-- Punto de entrada para el despliegue -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
