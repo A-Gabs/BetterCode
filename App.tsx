@@ -78,9 +78,7 @@ const Hero = () => {
 
   return (
     <section className="relative pt-40 pb-28 px-4 bg-white overflow-hidden min-h-[95vh] flex items-center justify-center">
-      {/* --- Inmersive Ink/Lava Background (Light Edition) --- */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-slate-50">
-        
         <style dangerouslySetInnerHTML={{ __html: `
           @keyframes liquid-drift-1 {
             0%, 100% { transform: scale(1) translate(0%, 0%); }
@@ -96,32 +94,16 @@ const Hero = () => {
             will-change: transform;
           }
         `}} />
-
-        {/* Base Layer: Subtlety */}
-        <div 
-          className="absolute w-full h-full opacity-10"
-          style={{ background: 'radial-gradient(circle at 50% 50%, #1F2A44 0%, transparent 60%)' }}
-        />
-
-        {/* Blobs */}
-        <div 
-          className="liquid-blob absolute w-[160vw] h-[160vw] md:w-[90vw] md:h-[90vw] -top-[10%] -left-[10%] opacity-40 mix-blend-multiply"
-          style={{ transform: `translate3d(${mousePos.x * 200}px, ${mousePos.y * 200}px, 0)` }}
-        >
+        <div className="absolute w-full h-full opacity-10" style={{ background: 'radial-gradient(circle at 50% 50%, #1F2A44 0%, transparent 60%)' }} />
+        <div className="liquid-blob absolute w-[160vw] h-[160vw] md:w-[90vw] md:h-[90vw] -top-[10%] -left-[10%] opacity-40 mix-blend-multiply" style={{ transform: `translate3d(${mousePos.x * 200}px, ${mousePos.y * 200}px, 0)` }}>
           <div className="w-full h-full rounded-full blur-[140px] md:blur-[220px]" style={{ background: 'radial-gradient(circle, #FF4D2E 0%, transparent 70%)', animation: 'liquid-drift-1 28s ease-in-out infinite' }} />
         </div>
-        
-        <div 
-          className="liquid-blob absolute w-[140vw] h-[140vw] md:w-[80vw] md:h-[80vw] bottom-[5%] right-[0%] opacity-30 mix-blend-multiply"
-          style={{ transform: `translate3d(${mousePos.x * -350}px, ${mousePos.y * -350}px, 0)` }}
-        >
+        <div className="liquid-blob absolute w-[140vw] h-[140vw] md:w-[80vw] md:h-[80vw] bottom-[5%] right-[0%] opacity-30 mix-blend-multiply" style={{ transform: `translate3d(${mousePos.x * -350}px, ${mousePos.y * -350}px, 0)` }}>
           <div className="w-full h-full rounded-full blur-[160px] md:blur-[260px]" style={{ background: 'radial-gradient(circle, #C0392B 0%, transparent 75%)', animation: 'liquid-drift-2 38s ease-in-out infinite' }} />
         </div>
-
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/90 z-[1]" />
       </div>
 
-      {/* --- Content --- */}
       <div className="relative z-20 max-w-5xl mx-auto text-center px-4">
         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-900/5 text-slate-900 text-xs font-black mb-12 uppercase tracking-[0.2em] backdrop-blur-xl border border-black/5 shadow-sm">
           <span className="relative flex h-3 w-3">
@@ -131,10 +113,7 @@ const Hero = () => {
           Matrícula abierta 2025
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9] text-slate-950">
-          {headline}
-        </h1>
-        
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9] text-slate-950">{headline}</h1>
         <p className="text-2xl md:text-4xl text-slate-600 mb-16 max-w-4xl mx-auto leading-tight font-bold tracking-tight">
           Diseña con IA. Programa con IA. Despliega con IA. 
           <span className="block mt-2 text-slate-950 underline decoration-accent decoration-4 underline-offset-8"> $0 en herramientas. 100% real.</span>
@@ -142,7 +121,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
           <a href="#precios" className="group w-full sm:w-auto bg-accent text-white px-10 py-8 rounded-[2.5rem] text-2xl font-black hover:scale-105 transition-all shadow-[0_20px_60px_-15px_rgba(255,77,46,0.4)] flex items-center justify-center gap-4 text-center">
-            Quiero aprender a crear mi web -> 
+            Quiero aprender a crear mi web <ArrowRight size={28} />
           </a>
           <a href="#milestones" className="w-full sm:w-auto bg-slate-950 text-white px-14 py-8 rounded-[2.5rem] text-3xl font-black hover:bg-black transition-all border border-black/10 backdrop-blur-md shadow-xl">
             Temario
@@ -163,26 +142,15 @@ const Milestones = () => {
   return (
     <section className="py-32 bg-[#0B0B0B] text-white overflow-hidden relative" id="milestones">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-accent/10 blur-[120px] rounded-full pointer-events-none"></div>
-
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Lo que puedes lograr con BetterCode</h2>
           <div className="inline-block relative">
-            <span className="relative z-10 text-4xl md:text-6xl font-extrabold px-6 py-2 text-white bg-accent rounded-2xl inline-block -rotate-1 transform shadow-[0_10px_40px_rgba(255,77,46,0.4)]">
-              en solo 3 clases
-            </span>
+            <span className="relative z-10 text-4xl md:text-6xl font-extrabold px-6 py-2 text-white bg-accent rounded-2xl inline-block -rotate-1 transform shadow-[0_10px_40px_rgba(255,77,46,0.4)]">en solo 3 clases</span>
           </div>
           <p className="mt-10 text-xl md:text-2xl font-bold text-slate-400 tracking-tight">Web real. Deploy real. Sin saber código.</p>
-          
-          <div className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl max-w-2xl mx-auto backdrop-blur-md">
-            <p className="text-sm font-bold text-slate-300 uppercase tracking-widest leading-relaxed">
-              “¿Ya tienes tu web diseñada? <br/>
-              <span className="text-accent">Puedes empezar directamente desde la Clase 2 o Clase 3.</span>”
-            </p>
-          </div>
         </div>
 
-        {/* Timeline */}
         <div className="relative flex justify-center items-center mb-24 max-w-4xl mx-auto">
           <div className="absolute top-1/2 left-0 w-full h-[2px] bg-slate-800 -translate-y-1/2"></div>
           <div className="relative flex justify-between w-full px-4">
@@ -190,24 +158,18 @@ const Milestones = () => {
               <div className="w-20 h-20 rounded-full bg-accent text-white flex items-center justify-center font-black text-xl shadow-[0_0_40px_rgba(255,77,46,0.5)] z-10 border-4 border-[#0B0B0B]">Hoy</div>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]">
-                <span>Clase</span>
-                <span>2</span>
-              </div>
+              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]"><span>Clase</span><span>2</span></div>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]">
-                <span>Clase</span>
-                <span>3</span>
-              </div>
+              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]"><span>Clase</span><span>3</span></div>
             </div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid lg:grid-cols-3 gap-8">
           <div className="bg-[#141414] border border-white/10 p-10 rounded-[3rem] flex flex-col h-full hover:border-accent/50 transition-all group relative overflow-hidden">
             <h3 className="text-2xl font-black mb-10 text-white group-hover:text-accent transition-colors">Diseña tu web con base real</h3>
-            <ul className="space-y-6 mb-12 flex-grow">
+            <ul className="space-y-6 flex-grow">
               {["Definir logo y paleta de colores", "Moodboard visual en Pinterest", "Site diagram usando IA", "Diseño completo en Figma"].map((text, i) => (
                 <li key={i} className="flex items-start gap-4 text-slate-400 font-bold"><CheckCircle2 size={22} className="text-accent shrink-0 mt-1" />{text}</li>
               ))}
@@ -215,7 +177,7 @@ const Milestones = () => {
           </div>
           <div className="bg-[#141414] border border-white/10 p-10 rounded-[3rem] flex flex-col h-full hover:border-accent/50 transition-all group relative overflow-hidden">
             <h3 className="text-2xl font-black mb-10 text-white group-hover:text-accent transition-colors">Convierte tu diseño en una web online</h3>
-            <ul className="space-y-6 mb-12 flex-grow">
+            <ul className="space-y-6 flex-grow">
               {["Pasar Figma a web usando IA", "Iterar el diseño con prompteo", "Subir el proyecto a GitHub", "Deploy en Vercel con link público"].map((text, i) => (
                 <li key={i} className="flex items-start gap-4 text-slate-400 font-bold"><CheckCircle2 size={22} className="text-accent shrink-0 mt-1" />{text}</li>
               ))}
@@ -223,7 +185,7 @@ const Milestones = () => {
           </div>
           <div className="bg-[#141414] border border-white/10 p-10 rounded-[3rem] flex flex-col h-full hover:border-accent/50 transition-all group relative overflow-hidden">
             <h3 className="text-2xl font-black mb-10 text-white group-hover:text-accent transition-colors">Navegación, pagos y escalado</h3>
-            <ul className="space-y-6 mb-12 flex-grow">
+            <ul className="space-y-6 flex-grow">
               {["Paginación y corrección", "Mejora de estructura", "Integración de links de pago", "Versionado de tu web"].map((text, i) => (
                 <li key={i} className="flex items-start gap-4 text-slate-400 font-bold"><CheckCircle2 size={22} className="text-accent shrink-0 mt-1" />{text}</li>
               ))}
@@ -242,7 +204,7 @@ const Comparison = () => {
         <h2 className="text-4xl font-extrabold text-center mb-16 tracking-tight text-slate-950">¿Es esto para ti?</h2>
         <div className="grid md:grid-cols-2 gap-12">
           <div className="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm">
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2 text-emerald-600"><CheckCircle2 size={24} /> Es para ti si…</h3>
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2 text-emerald-600"><CheckCircle2 size={24} /> Es para ti si&hellip;</h3>
             <ul className="space-y-6">
               {[
                 "Nunca has escrito código, pero necesitas una web funcional antes de 2026.",
@@ -251,14 +213,12 @@ const Comparison = () => {
                 "Aprendes haciendo, prefieres publicar una web real en lugar de ver teoría.",
                 "Quieres control total de tu web, sin pagar mensualidades absurdas."
               ].map((text, i) => (
-                <li key={i} className="flex items-start gap-4 font-bold text-slate-700">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0"></div>{text}
-                </li>
+                <li key={i} className="flex items-start gap-4 font-bold text-slate-700"><div className="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0" />{text}</li>
               ))}
             </ul>
           </div>
           <div className="bg-slate-100 p-10 rounded-[2.5rem] border border-slate-200 shadow-inner">
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2 text-slate-400"><XCircle size={24} /> No es para ti si…</h3>
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-2 text-slate-400"><XCircle size={24} /> No es para ti si&hellip;</h3>
             <ul className="space-y-6">
               {[
                 "Buscas una solución mágica en 1 clic sin aprender nada en el proceso.",
@@ -267,9 +227,7 @@ const Comparison = () => {
                 "Te molesta tener que probar, fallar y volver a intentar.",
                 "No tienes tiempo ni ganas de experimentar y probar por tu cuenta."
               ].map((text, i) => (
-                <li key={i} className="flex items-start gap-4 font-bold text-slate-400 line-through">
-                  <div className="w-2 h-2 rounded-full bg-slate-300 mt-2.5 shrink-0"></div>{text}
-                </li>
+                <li key={i} className="flex items-start gap-4 font-bold text-slate-400 line-through"><div className="w-2 h-2 rounded-full bg-slate-300 mt-2.5 shrink-0" />{text}</li>
               ))}
             </ul>
           </div>
@@ -385,19 +343,33 @@ const FAQ = () => {
   );
 };
 
-const CTAFinal = () => (
-  <section className="py-24 px-4 bg-white">
-    <div className="max-w-5xl mx-auto bg-accent rounded-[3rem] p-12 text-center text-white shadow-2xl">
-      <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">No pierdas otro año con una web "en construcción".</h2>
-      <a href="#precios" className="inline-block bg-white text-accent px-10 py-6 rounded-2xl text-xl font-black hover:scale-105 transition-all">Quiero el pack completo ($22)</a>
-    </div>
-  </section>
-);
+const CTAFinal = () => {
+  const whatsappNumber = "51930536304";
+  const whatsappMessage = encodeURIComponent("Estoy interesado pero tengo algunas dudas");
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  return (
+    <section className="py-24 px-4 bg-white">
+      <div className="max-w-5xl mx-auto bg-accent rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
+        <div className="relative z-10">
+          <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">No pierdas otro año con una web &quot;en construcción&quot;.</h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a href="#precios" className="w-full sm:w-auto bg-white text-accent px-10 py-6 rounded-2xl text-xl font-black hover:scale-105 transition-all">Quiero el pack completo ($22)</a>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-900/20 hover:bg-slate-900/40 px-10 py-6 rounded-2xl transition-all border border-white/20">
+              <MessageCircle size={24} className="fill-white text-slate-900" />
+              <span className="font-extrabold text-xl">Dudas por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Footer = () => (
   <footer className="py-12 border-t border-slate-100 bg-white text-center">
     <div className="font-extrabold text-xl text-slate-900 mb-4">BetterCode</div>
-    <div className="text-slate-400 font-bold text-sm">© {new Date().getFullYear()} BetterCode. Sin humo. Solo código y despliegues reales.</div>
+    <div className="text-slate-400 font-bold text-sm">&copy; {new Date().getFullYear()} BetterCode. Sin humo. Solo código y despliegues reales.</div>
   </footer>
 );
 
