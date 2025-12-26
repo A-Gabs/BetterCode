@@ -362,7 +362,7 @@ const FAQ = () => {
     },
     { 
       q: "¿Sirve para vender productos reales?", 
-      a: "Sí. En la Clase 3 aprenderás a crear páginas dinámicas por producto y a asociar links de pago (Stripe, Gumroad u otros).\n\nNo es un ecommerce con backend tipo Shopify o WordPress, sino una estructura moderna y ligera, ideal para vender sin complicaciones técnicas.\n\n👉 Si tienes productos estáticos y sin rotación, este enfoque te sirve perfecto.\n\n👉 Si tienes más de 10–15 productos, igual puedes tomar el curso: veremos cómo evaluar costos, tarifas y plataformas de pago para que elijas la mejor opción según tu caso." 
+      a: "Sí. En la Clase 3 aprenderás a crear páginas dinámicas por producto y a asociar links de pago (Veremos plataformas y sus tarifas).\n\nNo es un ecommerce con backend tipo Shopify o WordPress, sino una estructura moderna y ligera, ideal para vender sin complicaciones técnicas.\n\n👉 Si tienes productos o servicios estáticos y sin rotación, este enfoque te sirve perfecto.\n\n👉 Si tienes más de 10–15 productos, igual puedes tomar el curso (pero te recomiendo un ecommerce): veremos cómo evaluar costos, tarifas y plataformas de pago para que elijas la mejor opción según tu caso." 
     }
   ];
 
