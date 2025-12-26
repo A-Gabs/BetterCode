@@ -16,6 +16,10 @@ import {
 
 // --- Components ---
 
+/**
+ * STRATEGIC COMPONENT: Navigation
+ * Handles primary conversion paths.
+ */
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   
@@ -46,7 +50,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - Direct access to conversion cards */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 flex flex-col gap-4">
           <a href="#milestones" onClick={() => setIsOpen(false)} className="text-lg font-semibold py-2 text-slate-900">Programa</a>
@@ -61,6 +65,10 @@ const Navbar = () => {
   );
 };
 
+/**
+ * CARD 1: UVP CARD (Hero Section)
+ * Goal: Capture attention and filter users.
+ */
 const Hero = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -121,10 +129,10 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16">
           <a href="#precios" className="group w-full sm:w-auto bg-accent text-white px-10 py-8 rounded-[2.5rem] text-2xl font-black hover:scale-105 transition-all shadow-[0_20px_60px_-15px_rgba(255,77,46,0.4)] flex items-center justify-center gap-4 text-center">
-            Quiero aprender a crear mi web <ArrowRight size={28} />
+            Quiero aprender <ArrowRight size={28} />
           </a>
           <a href="#milestones" className="w-full sm:w-auto bg-slate-950 text-white px-14 py-8 rounded-[2.5rem] text-3xl font-black hover:bg-black transition-all border border-black/10 backdrop-blur-md shadow-xl">
-            Temario
+            Programa
           </a>
         </div>
 
@@ -138,9 +146,13 @@ const Hero = () => {
   );
 };
 
+/**
+ * CARD 2: THE TRANSFORMATION MAP (Milestones)
+ * Goal: Reduce uncertainty of "how".
+ */
 const Milestones = () => {
   return (
-    <section className="py-32 bg-[#0B0B0B] text-white overflow-hidden relative" id="milestones">
+    <section className="py-32 bg-[#0B0B0B] text-white overflow-hidden relative scroll-mt-16" id="milestones">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-accent/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -161,7 +173,7 @@ const Milestones = () => {
           </div>
         </div>
 
-        {/* Timeline */}
+        {/* Timeline Visualization */}
         <div className="relative flex justify-center items-center mb-24 max-w-4xl mx-auto">
           <div className="absolute top-1/2 left-0 w-full h-[2px] bg-slate-800 -translate-y-1/2"></div>
           <div className="relative flex justify-between w-full px-4">
@@ -214,9 +226,13 @@ const Milestones = () => {
   );
 };
 
+/**
+ * CARD 3: IDEAL CUSTOMER FIT (Comparison)
+ * Goal: Segment the audience.
+ */
 const Comparison = () => {
   return (
-    <section className="py-24 px-4 bg-slate-50 border-y border-slate-200">
+    <section className="py-24 px-4 bg-slate-50 border-y border-slate-200 scroll-mt-16" id="ideal-fit">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center mb-16 tracking-tight text-slate-950">¿Es esto para ti?</h2>
         <div className="grid md:grid-cols-2 gap-12">
@@ -258,6 +274,10 @@ const Comparison = () => {
   );
 };
 
+/**
+ * CARD 4: PRICING MATRIX
+ * Goal: Present offer and tiers.
+ */
 const Pricing = () => {
   const packs = [
     {
@@ -284,7 +304,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-[#0B0B0B] text-white overflow-hidden relative" id="precios">
+    <section className="py-24 px-4 bg-[#0B0B0B] text-white overflow-hidden relative scroll-mt-16" id="precios">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">Inversión transparente</h2>
@@ -312,6 +332,10 @@ const Pricing = () => {
   );
 };
 
+/**
+ * CARD 5: VALUE PILLARS (Results)
+ * Goal: Tangible post-purchase benefits.
+ */
 const Results = () => {
   const outcomes = [
     { title: "Tu primera web real, funcionando hoy mismo", description: "Olvídate de plantillas genéricas: tendrás una web propia bajo un dominio free o puedes ponerle uno propio, lista para mostrar al mundo." },
@@ -323,7 +347,7 @@ const Results = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 border-y border-slate-100">
+    <section className="py-24 bg-slate-50 border-y border-slate-100 scroll-mt-16" id="resultados">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-slate-950">Resultados reales desde la 2 clase</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -340,6 +364,10 @@ const Results = () => {
   );
 };
 
+/**
+ * CARD 6: FRICTION-REMOVAL CARD (FAQ)
+ * Goal: Kill final objections.
+ */
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -367,7 +395,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-[#0B0B0B]" id="faq">
+    <section className="py-24 px-4 bg-[#0B0B0B] scroll-mt-16" id="faq">
       <div className="max-w-3xl mx-auto text-white">
         <h2 className="text-4xl font-extrabold text-center mb-16 tracking-tight">Preguntas Frecuentes</h2>
         <div className="space-y-4">
@@ -393,13 +421,17 @@ const FAQ = () => {
   );
 };
 
+/**
+ * CARD 7: THE HARD CLOSE (CTA Final)
+ * Goal: Urgency and lead recovery.
+ */
 const CTAFinal = () => {
   const whatsappNumber = "51930536304";
   const whatsappMessage = encodeURIComponent("Estoy interesado pero tengo algunas dudas");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section className="py-24 px-4 bg-white">
+    <section className="py-24 px-4 bg-white scroll-mt-16" id="cierre">
       <div className="max-w-5xl mx-auto bg-accent rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
         <div className="relative z-10">
           <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">No pierdas otro año con una web &quot;en construcción&quot;.</h2>
