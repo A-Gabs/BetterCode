@@ -142,15 +142,26 @@ const Milestones = () => {
   return (
     <section className="py-32 bg-[#0B0B0B] text-white overflow-hidden relative" id="milestones">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-accent/10 blur-[120px] rounded-full pointer-events-none"></div>
+
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Lo que puedes lograr con BetterCode</h2>
           <div className="inline-block relative">
-            <span className="relative z-10 text-4xl md:text-6xl font-extrabold px-6 py-2 text-white bg-accent rounded-2xl inline-block -rotate-1 transform shadow-[0_10px_40px_rgba(255,77,46,0.4)]">en solo 3 clases</span>
+            <span className="relative z-10 text-4xl md:text-6xl font-extrabold px-6 py-2 text-white bg-accent rounded-2xl inline-block -rotate-1 transform shadow-[0_10px_40px_rgba(255,77,46,0.4)]">
+              en solo 3 clases
+            </span>
           </div>
           <p className="mt-10 text-xl md:text-2xl font-bold text-slate-400 tracking-tight">Web real. Deploy real. Sin saber código.</p>
+          
+          <div className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl max-w-2xl mx-auto backdrop-blur-md">
+            <p className="text-sm font-bold text-slate-300 uppercase tracking-widest leading-relaxed">
+              &ldquo;¿Ya tienes tu web diseñada? <br/>
+              <span className="text-accent">Puedes empezar directamente desde la Clase 2 o Clase 3.</span>&rdquo;
+            </p>
+          </div>
         </div>
 
+        {/* Timeline */}
         <div className="relative flex justify-center items-center mb-24 max-w-4xl mx-auto">
           <div className="absolute top-1/2 left-0 w-full h-[2px] bg-slate-800 -translate-y-1/2"></div>
           <div className="relative flex justify-between w-full px-4">
@@ -158,18 +169,24 @@ const Milestones = () => {
               <div className="w-20 h-20 rounded-full bg-accent text-white flex items-center justify-center font-black text-xl shadow-[0_0_40px_rgba(255,77,46,0.5)] z-10 border-4 border-[#0B0B0B]">Hoy</div>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]"><span>Clase</span><span>2</span></div>
+              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]">
+                <span>Clase</span>
+                <span>2</span>
+              </div>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]"><span>Clase</span><span>3</span></div>
+              <div className="w-20 h-20 rounded-full bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-black text-lg leading-[0.85] z-10 border-4 border-[#0B0B0B]">
+                <span>Clase</span>
+                <span>3</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 mb-24">
           <div className="bg-[#141414] border border-white/10 p-10 rounded-[3rem] flex flex-col h-full hover:border-accent/50 transition-all group relative overflow-hidden">
             <h3 className="text-2xl font-black mb-10 text-white group-hover:text-accent transition-colors">Diseña tu web con base real</h3>
-            <ul className="space-y-6 flex-grow">
+            <ul className="space-y-6 mb-12 flex-grow">
               {["Definir logo y paleta de colores", "Moodboard visual en Pinterest", "Site diagram usando IA", "Diseño completo en Figma"].map((text, i) => (
                 <li key={i} className="flex items-start gap-4 text-slate-400 font-bold"><CheckCircle2 size={22} className="text-accent shrink-0 mt-1" />{text}</li>
               ))}
@@ -177,7 +194,7 @@ const Milestones = () => {
           </div>
           <div className="bg-[#141414] border border-white/10 p-10 rounded-[3rem] flex flex-col h-full hover:border-accent/50 transition-all group relative overflow-hidden">
             <h3 className="text-2xl font-black mb-10 text-white group-hover:text-accent transition-colors">Convierte tu diseño en una web online</h3>
-            <ul className="space-y-6 flex-grow">
+            <ul className="space-y-6 mb-12 flex-grow">
               {["Pasar Figma a web usando IA", "Iterar el diseño con prompteo", "Subir el proyecto a GitHub", "Deploy en Vercel con link público"].map((text, i) => (
                 <li key={i} className="flex items-start gap-4 text-slate-400 font-bold"><CheckCircle2 size={22} className="text-accent shrink-0 mt-1" />{text}</li>
               ))}
@@ -185,7 +202,7 @@ const Milestones = () => {
           </div>
           <div className="bg-[#141414] border border-white/10 p-10 rounded-[3rem] flex flex-col h-full hover:border-accent/50 transition-all group relative overflow-hidden">
             <h3 className="text-2xl font-black mb-10 text-white group-hover:text-accent transition-colors">Navegación, pagos y escalado</h3>
-            <ul className="space-y-6 flex-grow">
+            <ul className="space-y-6 mb-12 flex-grow">
               {["Paginación y corrección", "Mejora de estructura", "Integración de links de pago", "Versionado de tu web"].map((text, i) => (
                 <li key={i} className="flex items-start gap-4 text-slate-400 font-bold"><CheckCircle2 size={22} className="text-accent shrink-0 mt-1" />{text}</li>
               ))}
@@ -213,7 +230,9 @@ const Comparison = () => {
                 "Aprendes haciendo, prefieres publicar una web real en lugar de ver teoría.",
                 "Quieres control total de tu web, sin pagar mensualidades absurdas."
               ].map((text, i) => (
-                <li key={i} className="flex items-start gap-4 font-bold text-slate-700"><div className="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0" />{text}</li>
+                <li key={i} className="flex items-start gap-4 font-bold text-slate-700">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0"></div>{text}
+                </li>
               ))}
             </ul>
           </div>
@@ -227,7 +246,9 @@ const Comparison = () => {
                 "Te molesta tener que probar, fallar y volver a intentar.",
                 "No tienes tiempo ni ganas de experimentar y probar por tu cuenta."
               ].map((text, i) => (
-                <li key={i} className="flex items-start gap-4 font-bold text-slate-400 line-through"><div className="w-2 h-2 rounded-full bg-slate-300 mt-2.5 shrink-0" />{text}</li>
+                <li key={i} className="flex items-start gap-4 font-bold text-slate-400 line-through">
+                  <div className="w-2 h-2 rounded-full bg-slate-300 mt-2.5 shrink-0"></div>{text}
+                </li>
               ))}
             </ul>
           </div>
@@ -320,21 +341,50 @@ const Results = () => {
 };
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const faqs = [
-    { q: "¿De verdad no pago nada por herramientas?", a: "Correcto. Usamos planes gratuitos de Figma, GitHub, Vercel y AI Studio. Son suficientes para proyectos profesionales." },
-    { q: "¿Necesito saber diseño o código?", a: "No. Empezamos de cero. La IA hace el trabajo pesado, tú la diriges." },
-    { q: "¿Sirve para vender productos reales?", a: "Sí. En la Clase 3 aprenderás a crear páginas dinámicas y asociar links de pago tipo Stripe o Gumroad." }
+    { 
+      q: "¿De verdad no pago nada por herramientas?", 
+      a: "Correcto. Usamos los planes gratuitos de Figma, GitHub, Vercel y AI Studio. Estos planes son increíblemente generosos y suficientes para proyectos profesionales hasta que tengas miles de visitas." 
+    },
+    { 
+      q: "¿Necesito saber diseño o código previamente?", 
+      a: "No. Empezamos desde lo más básico de la lógica visual y técnica. La IA se encarga del trabajo pesado, tú te encargas de la dirección y la lógica del negocio." 
+    },
+    { 
+      q: "¿Qué pasa si no tengo logo ni marca?", 
+      a: "La Clase 1 está diseñada precisamente para eso. Aprenderás a usar IA y herramientas gratuitas para crear una identidad visual decente en minutos." 
+    },
+    { 
+      q: "¿Esto es un ecommerce como Shopify?", 
+      a: "No. Es una estructura frontend moderna con páginas dinámicas y links de pago asociados. Perfecto para vender productos sin gestionar backend, inventario o historial complejo." 
+    },
+    { 
+      q: "¿Sirve para vender productos reales?", 
+      a: "Sí. En la Clase 3 aprenderás a crear páginas dinámicas por producto y a asociar links de pago (Stripe, Gumroad u otros).\n\nNo es un ecommerce con backend tipo Shopify o WordPress, sino una estructura moderna y ligera, ideal para vender sin complicaciones técnicas.\n\n👉 Si tienes productos estáticos y sin rotación, este enfoque te sirve perfecto.\n\n👉 Si tienes más de 10–15 productos, igual puedes tomar el curso: veremos cómo evaluar costos, tarifas y plataformas de pago para que elijas la mejor opción según tu caso." 
+    }
   ];
 
   return (
     <section className="py-24 px-4 bg-[#0B0B0B]" id="faq">
       <div className="max-w-3xl mx-auto text-white">
-        <h2 className="text-4xl font-extrabold text-center mb-16">Preguntas Frecuentes</h2>
+        <h2 className="text-4xl font-extrabold text-center mb-16 tracking-tight">Preguntas Frecuentes</h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="border-b border-white/10 pb-4">
-              <p className="text-xl font-bold mb-2">{faq.q}</p>
-              <p className="text-slate-400 font-semibold">{faq.a}</p>
+            <div key={i} className="border-b border-white/10 pb-6">
+              <button 
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex justify-between items-center text-left hover:text-accent transition-colors"
+              >
+                <span className="text-xl font-bold pr-8">{faq.q}</span>
+                <ChevronDown className={`transition-transform duration-300 ${openIndex === i ? 'rotate-180' : ''}`} />
+              </button>
+              {openIndex === i && (
+                <div className="mt-4 text-slate-400 font-semibold leading-relaxed text-lg whitespace-pre-line animate-in fade-in slide-in-from-top-2 duration-300">
+                  {faq.a}
+                </div>
+              )}
             </div>
           ))}
         </div>
